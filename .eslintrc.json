@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb-base"],
+  "plugins": ["import", "react"],
+  "rules": {
+    "no-unused-vars": [2, { "varsIgnorePattern": "^h$" }]
+  },
+  "env": { "browser": true },
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true }
+  }
+}
