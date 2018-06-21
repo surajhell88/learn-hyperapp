@@ -13,6 +13,7 @@ export default ({ productList, cart }, { addToCart }) => (
             name,
             description,
             imgUrl,
+            quantity,
           }) => (
               <ProductItem
                 id={id}
@@ -20,6 +21,7 @@ export default ({ productList, cart }, { addToCart }) => (
                 description={description}
                 imgUrl={imgUrl}
                 addToCart={addToCart}
+                quantity={quantity}
               />
             ))
         }
