@@ -12,6 +12,7 @@
   "author": "suraj",
   "license": "MIT",
   "dependencies": {
+    "@hyperapp/router": "0.7.0",
     "hyperapp": "1.2.6"
   },
   "devDependencies": {

@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
@@ -22,6 +23,7 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname),
     hot: true,
-    port: 9000
+    port: 9000,
+    historyApiFallback: true
   }
 };

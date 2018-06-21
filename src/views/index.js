@@ -1,31 +1,16 @@
 import { h } from 'hyperapp';
+import { Route } from '@hyperapp/router';
+
 import Header from './Header';
-import ProductItem from './ProductItem';
+import Home from './Home';
+import Cart from './Cart';
 
 export default ({ productList, cart }, { addToCart }) => (
   <div>
     <Header cart={cart} />
     <div class="container">
-      <div class="card-deck">
-        {
-          productList.map(({
-            id,
-            name,
-            description,
-            imgUrl,
-            quantity,
-          }) => (
-              <ProductItem
-                id={id}
-                name={name}
-                description={description}
-                imgUrl={imgUrl}
-                addToCart={addToCart}
-                quantity={quantity}
-              />
-            ))
-        }
-      </div>
+      <Route path="/" render={() => <Home productList={productList} addToCart={addToCart} />} />
+      <Route path="/cart" render={() => <Cart cart={cart} />} />
     </div>
   </div>
 );
