@@ -1,4 +1,5 @@
 import { h } from 'hyperapp';
+
 import ProductItem from './ProductItem';
 
 export default ({ productList, addToCart }) =>
