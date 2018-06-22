@@ -10,7 +10,6 @@ export default {
         if (item.id === id) {
           return {
             ...item,
-            quantity: item.quantity - 1,
             inCartCount: item.inCartCount + 1,
           };
         }
@@ -18,4 +17,16 @@ export default {
       }),
     };
   },
+  removeFromCart: id => ({ cart, productList }) => ({
+    cart: cart.filter(itemID => itemID !== id),
+    productList: productList.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          inCartCount: 0,
+        };
+      }
+      return item;
+    }),
+  }),
 };

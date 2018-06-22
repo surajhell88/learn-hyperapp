@@ -1,6 +1,6 @@
 import { h } from 'hyperapp';
 
-export default ({ cart, productList }) =>
+export default ({ cart, productList, removeFromCart }) =>
   <div>
     <h1>Cart</h1>
     <p class="card-text">
@@ -12,9 +12,20 @@ export default ({ cart, productList }) =>
       {productList
         .filter(item => cart.indexOf(item.id) !== -1)
         .map(product =>
-          <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-            {product.description}
-            <span class="badge badge-primary badge-pill">{product.inCartCount}</span>
+          <li class="list-group-item list-group-item-action d-flex align-items-center">
+            <span class="badge badge-primary badge-pill mr-2">{product.inCartCount}</span>
+            <span class="flex-fill">{product.name}</span>
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              onclick={(e) => {
+                e.stopPropagation();
+                removeFromCart(product.id);
+              }}
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </li>)
       }
     </ul>

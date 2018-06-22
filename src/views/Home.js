@@ -10,6 +10,7 @@ export default ({ productList, addToCart }) =>
         description,
         imgUrl,
         quantity,
+        inCartCount,
       }) => (
           <ProductItem
             id={id}
@@ -18,6 +19,7 @@ export default ({ productList, addToCart }) =>
             imgUrl={imgUrl}
             addToCart={addToCart}
             quantity={quantity}
+            inCartCount={inCartCount}
           />
         ))
     }

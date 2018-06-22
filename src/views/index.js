@@ -5,7 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import Cart from './Cart';
 
-export default ({ productList, cart }, { addToCart }) => (
+export default ({ productList, cart }, { addToCart, removeFromCart }) => (
   <div>
     <Header cart={cart} />
     <div class="container">
@@ -18,7 +18,7 @@ export default ({ productList, cart }, { addToCart }) => (
       <Route
         path="/cart"
         render={
-          () => <Cart cart={cart} productList={productList} />
+          () => <Cart cart={cart} productList={productList} removeFromCart={removeFromCart} />
         }
       />
     </div>
