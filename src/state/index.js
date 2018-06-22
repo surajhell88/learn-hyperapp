@@ -7,6 +7,7 @@ export default {
       imgUrl: '/assets/img/teddy.jpeg',
       price: '3.5$',
       quantity: 12,
+      inCartCount: 0,
     },
     {
       id: Date.now() + 2,
@@ -15,6 +16,7 @@ export default {
       imgUrl: '/assets/img/cup.jpeg',
       price: '2.9$',
       quantity: 8,
+      inCartCount: 0,
     },
     {
       id: Date.now() + 3,
@@ -23,6 +25,7 @@ export default {
       imgUrl: '/assets/img/duck.jpeg',
       price: '4.1$',
       quantity: 3,
+      inCartCount: 0,
     },
   ],
   cart: [],

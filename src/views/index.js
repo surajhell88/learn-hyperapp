@@ -9,8 +9,18 @@ export default ({ productList, cart }, { addToCart }) => (
   <div>
     <Header cart={cart} />
     <div class="container">
-      <Route path="/" render={() => <Home productList={productList} addToCart={addToCart} />} />
-      <Route path="/cart" render={() => <Cart cart={cart} />} />
+      <Route
+        path="/"
+        render={
+          () => <Home productList={productList} addToCart={addToCart} />
+        }
+      />
+      <Route
+        path="/cart"
+        render={
+          () => <Cart cart={cart} productList={productList} />
+        }
+      />
     </div>
   </div>
 );
