@@ -16,7 +16,11 @@ export default ({
     <img class="card-img-top" src={imgUrl} alt="Card image cap" />
     <div class="card-body">
       <p class="card-text">{description}</p>
-      <p class="card-text"><small class="text-muted">{(quantity - inCartCount) === 0 ? 'No Items Left' : `Items Left: ${(quantity - inCartCount)}`}</small></p>
+      <p class="card-text">
+        <small class="text-muted">
+          {(quantity - inCartCount) === 0 ? 'No Items Left' : `Items Left: ${(quantity - inCartCount)}`}
+        </small>
+      </p>
     </div>
     <div class="card-footer">
       <button

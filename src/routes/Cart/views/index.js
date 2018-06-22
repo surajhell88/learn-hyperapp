@@ -13,8 +13,12 @@ export default ({ cart, productList, removeFromCart }) =>
         .filter(item => cart.indexOf(item.id) !== -1)
         .map(product =>
           <li class="list-group-item list-group-item-action d-flex align-items-center">
-            <span class="badge badge-primary badge-pill mr-2">{product.inCartCount}</span>
-            <span class="flex-fill">{product.name}</span>
+            <span class="badge badge-primary badge-pill mr-2">
+              {product.inCartCount}
+            </span>
+            <span class="flex-fill">
+              {product.name}
+            </span>
             <button
               type="button"
               class="close"
