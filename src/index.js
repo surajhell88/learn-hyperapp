@@ -1,5 +1,6 @@
 import { app } from 'hyperapp';
 import { location } from '@hyperapp/router';
+
 import state from './state';
 import actions from './actions';
 import view from './views';
