@@ -24,6 +24,7 @@ module.exports = {
     contentBase: path.resolve(__dirname),
     hot: true,
     port: 9000,
-    historyApiFallback: true
+    historyApiFallback: true,
+    overlay: true
   }
 };
