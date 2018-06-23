@@ -1,8 +1,7 @@
 import { h } from 'hyperapp';
 
 import Header from './Header';
-import HomeRoute from '../routes/Home';
-import CartRoute from '../routes/Cart';
+import { HomeRoute, CartRoute } from '../routes';
 
 export default ({ productList, cart }, { addToCart, removeFromCart }) => (
   <div>
